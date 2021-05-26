@@ -1,4 +1,5 @@
 package com.company.Model;
+
 import com.company.Manager.CartManager;
 import com.company.Manager.CartManagerImpl;
 
@@ -31,7 +32,7 @@ public class User {
         this.address = address;
         this.dob = dob;
         this.password = password;
-        this.loginStatus =  Login.LOGGEDIN;
+        this.loginStatus = Login.LOGGEDIN;
         this.cart = new CartManagerImpl();
     }
 

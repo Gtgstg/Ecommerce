@@ -42,25 +42,23 @@ public class ProductManagerImpl implements ProductManager {
         return null;
     }
 
-    public void removeProductById(int productId){
+    public void removeProductById(int productId) {
         if (products.containsKey(productId)) {
             products.remove(productId);
-            System.out.println(productId+ " removed successfully.");
-        }
-        else{
+            System.out.println(productId + " removed successfully.");
+        } else {
             System.out.println("Product is not available.");
         }
     }
 
-    public  void updateProductById(int productId, String name, String description, int price){
+    public void updateProductById(int productId, String name, String description, int price) {
         if (products.containsKey(productId)) {
             Product product = products.get(productId);
             product.setDescription(description);
             product.setPrice(price);
             product.setName(name);
-            System.out.println(productId+ " updated successfully.");
-        }
-        else{
+            System.out.println(productId + " updated successfully.");
+        } else {
             System.out.println("Product is not available.");
         }
     }

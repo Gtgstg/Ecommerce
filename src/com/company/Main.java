@@ -229,8 +229,7 @@ public class Main {
                         System.out.println("Please use valid inputs");
                         input = scanner.nextLine();
                 }
-            }
-            catch(Exception e){
+            } catch (Exception e) {
                 System.out.println("Invalid Input");
                 input = scanner.nextLine();
             }

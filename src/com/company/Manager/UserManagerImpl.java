@@ -63,7 +63,7 @@ public class UserManagerImpl implements UserManager {
         if (users.containsKey(userId)) {
             System.out.println("User Id      Name       Address       Password       DOB");
             User user = users.get(userId);
-            System.out.println(user.getUserId() + " " + user.getName() + "       " + user.getAddress() + "       " + user.getPassword()+"       "+user.getDob());
+            System.out.println(user.getUserId() + " " + user.getName() + "       " + user.getAddress() + "       " + user.getPassword() + "       " + user.getDob());
             return user;
         }
         System.out.println("There is no product " + userId);
@@ -104,7 +104,7 @@ public class UserManagerImpl implements UserManager {
         }
         User newUser = new User(++this.totalUser, name, address, password, date);
         users.put(this.totalUser, newUser);
-        System.out.println("SignUp Successful! Your userId is: "+ totalUser);
+        System.out.println("SignUp Successful! Your userId is: " + totalUser);
     }
 
     public void logIn(int userId, String password) {
@@ -150,7 +150,7 @@ public class UserManagerImpl implements UserManager {
         }
     }
 
-    public  void removeProductFromCartByUserId(int userId, int productId){
+    public void removeProductFromCartByUserId(int userId, int productId) {
         if (checkLoginStatus(userId) == Login.LOGGEDIN) {
             User currentUser = users.get(userId);
             currentUser.getCart().removeCart(productId);
@@ -159,7 +159,7 @@ public class UserManagerImpl implements UserManager {
         }
     }
 
-    public  void updateProductInCartByUserId(int userId, int productId, int units){
+    public void updateProductInCartByUserId(int userId, int productId, int units) {
         if (checkLoginStatus(userId) == Login.LOGGEDIN) {
             User currentUser = users.get(userId);
             currentUser.getCart().updateCart(productId, units);
